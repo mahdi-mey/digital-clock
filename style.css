@@ -1,3 +1,7 @@
+:root{
+    --main-color: hwb(0 0% 0%);
+    --fade-color: hwb(0 0% 0% 10%);
+}
 * {
   box-sizing: border-box;
   margin: 0;
