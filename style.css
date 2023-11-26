@@ -34,10 +34,15 @@ body{
 .minute{
   position: relative;
 }
-.hour   > .main,
-.minute > .main{
-  /* background-color: green; */
-  /* position: absolute; */
+.hour {
+  width: 73px;
+}
+.hour > *{
+  position: absolute;
+}
+.hour .main{
+  text-align: right;
+  right: 0;
 }
 .amORpm{
   padding: 1rem 0;
@@ -50,6 +55,7 @@ body{
   display: flex;
   justify-content: space-evenly;
   font-size: clamp(14px, 4vw, 32px);
+  color: var(--fade-color);
 }
 @font-face {
   font-family: "TechFont";
