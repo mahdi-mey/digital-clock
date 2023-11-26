@@ -1,6 +1,6 @@
 :root{
-    --main-color: hwb(0 0% 0%);
-    --fade-color: rgba(255, 0, 0, 0.229);
+    --main-color: #ff0000;
+    --fade-color: #ff00003a;
 }
 * {
   box-sizing: border-box;
@@ -16,13 +16,15 @@ body{
     height: 100vh;
 }
 .container{
-  width: 600px ;
+  /* width: 600px; */
   background-color: #111;
   border-radius: 5px;
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
+  padding: 3rem calc(2vw + 15px);
 }
 .time-container{
   display: flex;
+  justify-content: space-evenly;
 }
 .time-container > :not(.amORpm) {
   font-size: clamp(50px, 8vw, 100px); 
@@ -34,13 +36,13 @@ body{
 .minute{
   position: relative;
 }
-.hour {
-  width: 73px;
+.hour ,
+.minute{
+  width: 89px;
 }
-.hour > *{
+.hour > *,
+.minute > *{
   position: absolute;
-}
-.hour .main{
   text-align: right;
   right: 0;
 }
@@ -54,6 +56,7 @@ body{
 .days-container{
   display: flex;
   justify-content: space-evenly;
+  gap: calc(2vw + 15px);
   font-size: clamp(14px, 4vw, 32px);
   color: var(--fade-color);
 }
