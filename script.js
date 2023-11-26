@@ -8,6 +8,8 @@ const minuteElement = document.querySelector('.minute .main')
 const am = document.querySelector('.amORpm .am')
 const pm = document.querySelector('.amORpm .pm')
 
+const daysEl = document.querySelectorAll('.days-container > *')
+
 const date = new Date()
 
 let hour   = date.getHours()
@@ -22,3 +24,6 @@ if(ampm === 'AM'){
 }else{
     pm.style.color = mainColor
 }
+
+const dayOfWeek = date.getDay()
+daysEl[dayOfWeek - 1].style.color = mainColor
