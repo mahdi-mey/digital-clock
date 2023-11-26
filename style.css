@@ -1,6 +1,6 @@
 :root{
     --main-color: hwb(0 0% 0%);
-    --fade-color: hwb(0 0% 0% 10%);
+    --fade-color: rgba(255, 0, 0, 0.229);
 }
 * {
   box-sizing: border-box;
@@ -9,6 +9,47 @@
 }
 body{
     font-family: "TechFont", sans-serif;
+    background-color: #222;
+    color: var(--main-color);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+.container{
+  width: 600px ;
+  background-color: #111;
+  border-radius: 5px;
+  padding: 3rem 0;
+}
+.time-container{
+  display: flex;
+}
+.time-container > :not(.amORpm) {
+  font-size: clamp(50px, 8vw, 100px); 
+}
+.time-container .fade{
+  color: var(--fade-color);
+}
+.hour,
+.minute{
+  position: relative;
+}
+.hour   > .main,
+.minute > .main{
+  /* background-color: green; */
+  /* position: absolute; */
+}
+.amORpm{
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.days-container{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: clamp(14px, 4vw, 32px);
 }
 @font-face {
   font-family: "TechFont";
