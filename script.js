@@ -8,10 +8,10 @@ const minuteElement = document.querySelector('.minute .main')
 const am = document.querySelector('.amORpm .am')
 const pm = document.querySelector('.amORpm .pm')
 
-const data = new Date()
+const date = new Date()
 
-let hour   = data.getHours()
-let minute = data.getMinutes()
+let hour   = date.getHours()
+let minute = date.getMinutes()
 
 hourElement.innerHTML = hour
 minuteElement.innerHTML = minute
