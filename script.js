@@ -15,3 +15,10 @@ let minute = date.getMinutes()
 
 hourElement.innerHTML = hour
 minuteElement.innerHTML = minute
+
+let ampm = hour >= 12 ? 'PM' : 'AM';
+if(ampm === 'AM'){
+    am.style.color = mainColor
+}else{
+    pm.style.color = mainColor
+}
