@@ -10,20 +10,31 @@ const pm = document.querySelector('.amORpm .pm')
 
 const daysEl = document.querySelectorAll('.days-container > *')
 
-const date = new Date()
+function getTime(){
+    const date = new Date()
 
-let hour   = date.getHours()
-let minute = date.getMinutes()
-
-hourElement.innerHTML = hour
-minuteElement.innerHTML = minute
-
-let ampm = hour >= 12 ? 'PM' : 'AM';
-if(ampm === 'AM'){
-    am.style.color = mainColor
-}else{
-    pm.style.color = mainColor
+    let hour   = date.getHours()
+    let minute = date.getMinutes()
+    
+    hourElement.innerHTML = hour
+    minuteElement.innerHTML = minute
+    
+    let ampm = hour >= 12 ? 'PM' : 'AM';
+    if(ampm === 'AM'){
+        am.style.color = mainColor
+    }else{
+        pm.style.color = mainColor
+    }
+    
+    const dayOfWeek = date.getDay()
+    daysEl[dayOfWeek - 1].style.color = mainColor
+    console.log('get time function')
 }
 
-const dayOfWeek = date.getDay()
-daysEl[dayOfWeek - 1].style.color = mainColor
+document.addEventListener('load', getTime)
+
+// update time
+setInterval(() => {
+    getTime()
+    console.log('settimeout');
+}, 1000);
