@@ -28,7 +28,6 @@ function getTime(){
     
     const dayOfWeek = date.getDay()
     daysEl[dayOfWeek - 1].style.color = mainColor
-    console.log('get time function')
 }
 
 document.addEventListener('load', getTime)
@@ -36,5 +35,4 @@ document.addEventListener('load', getTime)
 // update time
 setInterval(() => {
     getTime()
-    console.log('settimeout');
 }, 1000);
