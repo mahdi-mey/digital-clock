@@ -1,6 +1,6 @@
 :root{
     --main-color: #ff0000;
-    --fade-color: #ff00003a;
+    --fade-color: hsla(0, 100%, 50%, 0.2);
 }
 * {
   box-sizing: border-box;
@@ -26,6 +26,9 @@ body{
   justify-content: space-evenly;
   margin-block-end: 2rem;
 }
+.time-container > * {
+  /* outline: 1px solid red; */
+}
 .time-container > :not(.amORpm) {
   font-size: clamp(50px, 8vw, 100px); 
 }
@@ -38,13 +41,13 @@ body{
 }
 .hour ,
 .minute{
-  width: 89px;
+  /* width: 89px; */
 }
 .hour > *,
 .minute > *{
-  position: absolute;
-  text-align: right;
-  right: 0;
+  /* position: absolute; */
+  /* text-align: right;
+  right: 0; */
 }
 .amORpm{
   display: flex;
