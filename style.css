@@ -26,28 +26,11 @@ body{
   justify-content: space-evenly;
   margin-block-end: 2rem;
 }
-.time-container > * {
-  /* outline: 1px solid red; */
-}
 .time-container > :not(.amORpm) {
   font-size: clamp(50px, 8vw, 100px); 
 }
 .time-container .fade{
   color: var(--fade-color);
-}
-.hour,
-.minute{
-  position: relative;
-}
-.hour ,
-.minute{
-  /* width: 89px; */
-}
-.hour > *,
-.minute > *{
-  /* position: absolute; */
-  /* text-align: right;
-  right: 0; */
 }
 .amORpm{
   display: flex;
